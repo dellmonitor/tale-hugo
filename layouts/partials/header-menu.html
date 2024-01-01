@@ -2,11 +2,15 @@
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
         <li>
-            <a href="{{ .URL }}">
+	    {{- if not (eq $currentPage.RelPermalink .URL) }}
+		    <a href="{{ .URL }}">
+	    {{- end }}
                 {{ .Pre }}
                 <span>{{ .Name }}</span>
                 {{ .Post }}
-            </a>
+	    {{- if not ( eq $currentPage.RelPermalink .URL) }}
+		    </a>
+	    {{- end }}
         </li>
     {{ end }}
 </ul>

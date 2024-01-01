@@ -46,14 +46,14 @@ footer,
     &:last-child {
       padding-right: 0;
     }
-
-    &:hover,
-    &:focus {
-      opacity: 1;
-    }
   }
 
   a {
+    color: $default-color;
+    font-family: $sans-serif;
+  }
+
+  span {
     color: $default-color;
     font-family: $sans-serif;
   }
