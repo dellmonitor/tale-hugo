@@ -21,9 +21,3 @@ $monospaced: Menlo, Monaco, monospace;
      -moz-box-sizing: $type;
           box-sizing: $type;
 }
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-     -moz-transition: $args;
-          transition: $args;
-}
