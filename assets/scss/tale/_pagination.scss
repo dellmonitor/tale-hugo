@@ -24,12 +24,6 @@
   .arrow {
     color: $default-color;
     position: absolute;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
-      text-decoration: none;
-    }
   }
 
   .left {
