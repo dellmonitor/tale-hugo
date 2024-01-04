@@ -2,17 +2,17 @@
 
 <main>
 	<div class="post">
-		{{ partial "single/title.html" . }}
-		{{ partial "single/header.html" . }}
-
 		<div class="post-archive">
 			{{ range (where (where .Site.Pages "IsPage" "=" true) "Params.hidden" "!=" true ).GroupByDate "2006" }}
 			<h2>{{ .Key }}</h2>
-			<ul class="listing">
+			<ul class="post-archive-listing">
 				{{ range .Pages }}
 				<li>
-					<span class="date">{{ .Date.Format "01/02" }}</span>
-					<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+					<span class="post-archive-date">{{ .Date.Format "02.01" }}</span>
+					<div class="post-archive-item">
+						<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+						{{ if isset .Params "author" }}<span class="post-archive-author"> {{ .Params.Author }}</span>{{ end }}
+					</div>
 				</li>
 				{{ end }}
 			</ul>

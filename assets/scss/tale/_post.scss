@@ -27,6 +27,29 @@
     width: 4rem;
   }
 
+  &-archive {
+    &-listing {
+      list-style-type: none;
+
+      li {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-date {
+      position: absolute;
+    }
+
+    &-item {
+      display: inline-block;
+      margin-left: 3rem;
+    }
+
+    &-author {
+      display: block;
+    }
+  }
+
   p {
     margin: 0 0 1rem;
   }
