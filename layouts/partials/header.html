@@ -1,15 +1,17 @@
 		<nav class="nav">
 			<div class="nav-container">
-				{{- if or (.IsPage) (.Scratch.Get "pagenumber")}}
-					<a href="{{ "/" | relURL }}">
-				{{ end }}
-					{{ if .IsPage }}
-						<h2 class="nav-title">{{ .Site.Title }}</h2>
-					{{ else }}
-						<h1 class="nav-title">{{ .Site.Title }}</h1>
-					{{ end }}
-				{{- if or (.IsPage) (.Scratch.Get "pagenumber")}}
-					</a>
+				{{ if .IsPage }}
+					<h2 class="nav-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h2>
+				{{ else }}
+					<h1 class="nav-title">
+						{{- if or (.IsPage) (.Scratch.Get "pagenumber")}}
+							<a href="{{ "/" | relURL }}">
+						{{ end }}
+							{{ .Site.Title }}
+						{{- if or (.IsPage) (.Scratch.Get "pagenumber")}}
+							</a>
+						{{ end }}
+					</h1>
 				{{ end }}
 				{{ partial "header-menu.html" . }}
 			</div>
