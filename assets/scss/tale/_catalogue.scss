@@ -27,6 +27,14 @@
     font-size: 2rem;
     font-weight: 700;
     margin: .5rem 0;
+
+    a {
+      color: $default-color;
+
+      &:hover {
+	color: $red;
+      }
+    }
   }
 
   &-line {

@@ -21,6 +21,15 @@ footer,
     margin: 1rem auto;
     position: relative;
     text-align: center;
+
+    a {
+      border-bottom-color: $shadow-color;
+
+      &:hover {
+	color: $red;
+	border-bottom-color: $light-red;
+      }
+    }
   }
 
   &-title {

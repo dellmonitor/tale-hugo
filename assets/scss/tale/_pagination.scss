@@ -10,6 +10,14 @@
     font-size: 1.1rem;
   }
 
+  a {
+    border-bottom-style: none;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
   .top {
     color: $default-color;
     font-family: $sans-serif;

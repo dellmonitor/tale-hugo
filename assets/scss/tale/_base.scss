@@ -41,6 +41,19 @@ h6 {
 a {
   color: $blue;
   text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: $light-blue;
+}
+
+a:visited {
+  color: $magenta;
+  border-bottom-color: $light-magenta;
+}
+
+a:hover {
+  color: $red;
+  border-bottom-color: $light-red;
 }
 
 blockquote {
