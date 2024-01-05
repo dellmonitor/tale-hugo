@@ -4,7 +4,7 @@
 other = "опубликовано"
 
 [generator]
-other = "Сделано с помощью «<a href='https://gohugo.io'>Хьюго</a>» и темы оформления «<a href='https://github.com/EmielH/tale-hugo/'>Тейл</a>»."
+other = "Сделано с&nbsp;помощью «<a href='https://gohugo.io'>Хьюго</a>» и&nbsp;темы оформления «<a href='https://github.com/EmielH/tale-hugo/'>Тейл</a>»."
 
 [publishdate]
 other = "{{ .PublishDate.Day }} {{ index $.Site.Data.months_ru (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }}"
