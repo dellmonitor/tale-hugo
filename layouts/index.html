@@ -1,10 +1,11 @@
 {{ define "main" }}
+{{ .Scratch.Set "pagenumber" .Paginator.PageNumber }}
 
 <main>
 	{{ partial "index/introduction.html" . }}
 
 	<div class="catalogue">
-		{{ range (.Paginate .Site.RegularPages).Pages }}
+		{{ range where (.Paginate .Site.RegularPages).Pages "Params.hidden" "ne" "true" }}
 			{{ .Render "summary" }}
 		{{ end }}
 	</div>

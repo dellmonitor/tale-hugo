@@ -5,24 +5,26 @@
 
 html,
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: $default-color;
+  background-color: #fff;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-family: $serif-primary;
-  font-size: 14px;
+  font-size: 16px;
   overflow-y: scroll;
 
   @media (min-width: 600px) {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 
 body {
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -31,19 +33,31 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--default-shade);
+  color: $default-color;
   font-family: $sans-serif;
-  line-height: normal;
 }
 
 a {
-  color: var(--blue);
+  color: $blue;
   text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: $light-blue;
+}
+
+a:visited {
+  color: $magenta;
+  border-bottom-color: $light-magenta;
+}
+
+a:hover {
+  color: $red;
+  border-bottom-color: $light-red;
 }
 
 blockquote {
-  border-left: .25rem solid var(--grey-2);
-  color: var(--grey-1);
+  border-left: .25rem solid $grey-2;
+  color: $grey-1;
   margin: .8rem 0;
   padding: .5rem 1rem;
 

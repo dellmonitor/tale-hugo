@@ -1,58 +1,41 @@
-* {
-    @include transition($color-transition);
-}
-
 .container {
   margin: 0 auto;
   max-width: 800px;
-  width: 80%;
+  width: 90%;
 }
 
-// Carve out an exception from the 80% narrowing of the viewport for the table
-// of contents. This is ugly, but there isn't a better way, since the table of
-// contents must be a child of the "main" element so that it its scrolling
-// behavior is intuitive.
-main > *,
+main,
 footer,
 .nav-container {
   display: block;
   margin: 0 auto;
   max-width: 800px;
-  width: 80%;
-}
-
-#darkModeToggle {
-    float: right;
-    position: sticky;
-    top: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    font-size: 2rem;
-
-    cursor: pointer;
+  width: 90%;
 }
 
 .nav {
-  box-shadow: 0 2px 2px -2px var(--shadow-color);
+  box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
 
   &-container {
     margin: 1rem auto;
     position: relative;
     text-align: center;
+
+    a {
+      border-bottom-color: $shadow-color;
+
+      &:hover {
+	color: $red;
+	border-bottom-color: $light-red;
+      }
+    }
   }
 
   &-title {
-    @include transition($color-transition, opacity .2s ease-out);
-    color: var(--default-color);
+    color: $default-color;
     display: inline-block;
     margin: 0;
-    padding-right: .2rem;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
-    }
   }
 
   ul {
@@ -63,24 +46,22 @@ footer,
   }
 
   li {
-    @include transition($color-transition, opacity .2s ease-out);
-    color: var(--default-color);
+    color: $default-color;
     display: inline-block;
-    opacity: .6;
     padding: 0 2rem 0 0;
 
     &:last-child {
       padding-right: 0;
     }
-
-    &:hover,
-    &:focus {
-      opacity: 1;
-    }
   }
 
   a {
-    color: var(--default-color);
+    color: $default-color;
+    font-family: $sans-serif;
+  }
+
+  span {
+    color: $default-color;
     font-family: $sans-serif;
   }
 }
@@ -105,7 +86,7 @@ footer {
   text-align: center;
 
   span {
-    color: var(--default-color);
+    color: $default-color;
     font-size: .8rem;
   }
 }
